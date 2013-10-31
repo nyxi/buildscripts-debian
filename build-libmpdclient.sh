@@ -15,9 +15,9 @@ fi
 #####################
 cd "$BUILDDIR"
 rm -R libmpdclient*
-wget http://www.musicpd.org/download/libmpdclient/2/libmpdclient-$1.tar.bz2
-tar xvf libmpdclient*tar.bz2
-rm libmpdclient*tar.bz2
+wget http://www.musicpd.org/download/libmpdclient/2/libmpdclient-$1.tar.xz
+tar xvf libmpdclient*tar.xz
+rm libmpdclient*tar.xz
 cd libmpdclient*
 #####################
 

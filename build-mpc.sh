@@ -15,9 +15,9 @@ fi
 #####################
 cd "$BUILDDIR"
 rm -R mpc*
-wget http://www.musicpd.org/download/mpc/0/mpc-$1.tar.bz2
-tar xvf mpc*tar.bz2
-rm mpc*tar.bz2
+wget http://www.musicpd.org/download/mpc/0/mpc-$1.tar.xz
+tar xvf mpc*tar.xz
+rm mpc*tar.xz
 cd mpc*
 #####################
 
@@ -30,7 +30,7 @@ echo "Maintainer: $MAINTAINER" >> tmp/DEBIAN/control
 echo "Architecture: amd64" >> tmp/DEBIAN/control
 echo "Version: $1" >> tmp/DEBIAN/control
 echo "Provides: mpc" >> tmp/DEBIAN/control
-echo "Depends: libc6 (>= 2.4), libmpdclient2 (>= 2.8)" >> tmp/DEBIAN/control
+echo "Depends: libc6 (>= 2.4), libmpdclient2 (>= 2.9)" >> tmp/DEBIAN/control
 echo "Priority: Extra" >> tmp/DEBIAN/control
 echo "Section: main" >> tmp/DEBIAN/control
 echo "Filename: pool/main/m/mpc/mpc_$1_amd64.deb" >> tmp/DEBIAN/control
