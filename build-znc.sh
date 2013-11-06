@@ -47,7 +47,7 @@ chmod 755 tmp/DEBIAN/postinst
 ./configure
 make DESTDIR="$(pwd)"/tmp install
 dpkg-deb --build tmp "znc_$1_amd64.deb"
-rm "$DEBDIR/znc*deb" 2> /dev/null
+rm $DEBDIR/znc*deb 2> /dev/null
 mv *deb "$DEBDIR/"
 echo "$(date) - znc $1 build ready" >> "$LOGFILE"
 #####################

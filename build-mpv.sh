@@ -42,8 +42,8 @@ echo " -- Wessel Dankers <wsl@fruit.je>  Sun, 06 Jan 2013 13:44:11 +0100" >> deb
 debuild -uc -us -b -j2
 cd /root/build
 rm *changes
-rm "$BUILDDIR/*build" 2> /dev/null
-rm "$DEBDIR/mpv*deb" 2> /dev/null
+rm $BUILDDIR/*build 2> /dev/null
+rm $DEBDIR/mpv*deb 2> /dev/null
 mv mpv*deb "$DEBDIR/"
 echo "$(date) - MPV build ready" >> "$LOGFILE"
 #####################

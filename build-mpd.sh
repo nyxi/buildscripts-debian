@@ -58,7 +58,7 @@ chmod 755 tmp/DEBIAN/postinst
 make DESTDIR="$(pwd)/tmp" install
 mv tmp/usr/local/bin tmp/usr/
 dpkg-deb --build tmp "mpd_$1_amd64.deb"
-rm "$DEBDIR/mpd*deb"
+rm $DEBDIR/mpd*deb
 mv *deb "$DEBDIR/"
 echo "$(date) - mpd $1 build ready" >> "$LOGFILE"
 #####################

@@ -48,7 +48,7 @@ chmod 755 tmp/DEBIAN/postinst
 ./configure
 make DESTDIR=$(pwd)/tmp install
 dpkg-deb --build tmp "libmpdclient2_$1_amd64.deb"
-rm "$DEBDIR/libmpdclient2*deb"
+rm $DEBDIR/libmpdclient2*deb
 mv *deb "$DEBDIR/"
 echo "$(date) - libmpdclient2 $1 build ready" >> "$LOGFILE"
 #####################

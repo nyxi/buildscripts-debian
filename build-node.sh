@@ -41,7 +41,7 @@ chmod 755 tmp/DEBIAN/postinst
 ./configure
 make DESTDIR="$(pwd)"/tmp install
 dpkg-deb --build tmp "node_$(pwd | tail -c 8)_amd64.deb"
-rm "$DEBDIR/node*deb" 2> /dev/null
+rm $DEBDIR/node*deb 2> /dev/null
 mv *deb "$DEBDIR/"
 echo "$(date) - nodejs $(pwd | tail -c 8) build ready" >> "$LOGFILE"
 #####################

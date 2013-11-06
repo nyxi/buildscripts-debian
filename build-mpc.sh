@@ -44,7 +44,7 @@ chmod -R a-s tmp/DEBIAN
 ./configure
 make DESTDIR="$(pwd)"/tmp install
 dpkg-deb --build tmp "mpc_$1_amd64.deb"
-rm "$DEBDIR/mpc*deb" 2> /dev/null
+rm $DEBDIR/mpc*deb 2> /dev/null
 mv *deb "$DEBDIR/"
 echo "$(date) - mpc $1 build ready" >> "$LOGFILE"
 #####################
